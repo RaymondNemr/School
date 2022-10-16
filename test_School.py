@@ -1,6 +1,6 @@
 import unittest
 import json
-from School import School
+from School_methods import School
 
 
 
