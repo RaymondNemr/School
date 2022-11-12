@@ -6,7 +6,7 @@ import json
 
 Base = Student_and_Grade.Base
 
-engine = create_engine('postgresql+pg8000://postgres:r4ym0nd@localhost:5432/bdprd')
+engine = create_engine('postgresql+pg8000://postgres:r4ym0nd@localhost:5432/class')
 
 Base.metadata.create_all(engine)
 
