@@ -1,7 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 import Student_and_Grade
-import pg8000
 import json
 
 Base = Student_and_Grade.Base
