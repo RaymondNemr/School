@@ -1,0 +1,4 @@
+FROM postgres:latest
+ENV POSTGRES_PASSWORD=r4ym0nd
+ENV POSTGRES_USER=postgres
+ENV POSTGRES_DB=school
