@@ -1,6 +1,5 @@
-FROM python:3
+FROM python:latest
 WORKDIR /app
-COPY requirements.txt ./
-RUN pip3 install -r requirements.txt
 COPY . .
-CMD ["python", "school_api.py"] 
+RUN pip3 install -r requirements.txt
+CMD ["python", "-u", "school_api.py"] 

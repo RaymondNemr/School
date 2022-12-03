@@ -3,9 +3,19 @@ from sqlalchemy.orm import sessionmaker
 import Student_and_Grade
 import json
 
-Base = Student_and_Grade.Base
-engine = create_engine('postgres://postgres:r4ym0nd@db:5432/school')
+db_name = 'school'
+db_user = 'postgres'
+db_pass = 'r4ym0nd'
+db_host = 'db'
+db_port = '5432'
 
+db_string = 'postgresql+psycopg2://{}:{}@{}:{}/{}'.format(db_user, db_pass, db_host, db_port, db_name)
+
+print(db_string)
+
+engine = create_engine(db_string)
+
+Base = Student_and_Grade.Base
 Base.metadata.create_all(engine)
 
 class School:
@@ -69,5 +79,3 @@ class School:
         result = self.session.query(Student_and_Grade.Grade).get(grade_id)
 
         return json.dumps({'subject':result.subject, 'grade':result.grade})
-
-
