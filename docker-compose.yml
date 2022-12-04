@@ -4,9 +4,11 @@ services:
     build: ./database/
     ports:
       - "5432:5432"
+    restart: always
   app:
     build: ./app/
     ports:
       - "5000:5000"
     depends_on:
       - db
+    restart: always
